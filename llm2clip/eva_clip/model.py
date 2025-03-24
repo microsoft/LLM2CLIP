@@ -20,7 +20,7 @@ from .modified_resnet import ModifiedResNet
 from .timm_model import TimmModel
 from .eva_vit_model import EVAVisionTransformer
 from .transformer import LayerNorm, QuickGELU, Attention, VisionTransformer, TextTransformer, LayerNormFp32
-
+from .llm_model import LLM2VecTextTransformer
 try:
     from apex.normalization import FusedLayerNorm
 except:
@@ -191,6 +191,9 @@ def _build_text_tower(
        )
     elif text_cfg.use_embedding:
         text = TextProj(embedding_dim=text_cfg.llm_embedding_dim, output_dim=embed_dim)
+    elif not text_cfg.use_embedding and text_cfg.llm_embedding_dim:
+        text_proj = TextProj(embedding_dim=text_cfg.llm_embedding_dim, output_dim=embed_dim)
+        text = LLM2VecTextTransformer(text_proj)
     else:
         act_layer = QuickGELU if quick_gelu else nn.GELU
         norm_layer = LayerNorm

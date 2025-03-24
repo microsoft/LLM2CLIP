@@ -1,0 +1,22 @@
+{
+    "embed_dim": 1152,
+    "vision_cfg": {
+        "timm_model_name": "vit_so400m_patch14_siglip_224.v2_webli",
+        "timm_model_pretrained": true,
+        "timm_pool": "map",
+        "timm_proj": "none",
+        "image_size": 224,
+        "layers": 27,
+        "width": 1152,
+        "patch_size": 14
+    },
+    "text_cfg": {
+        "use_embedding": false,
+        "llm_embedding_dim": 4096,
+        "context_length": 77,
+        "vocab_size": 49408,
+        "width": 768,
+        "heads": 12,
+        "layers": 12
+    }
+}
