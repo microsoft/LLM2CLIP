@@ -15,7 +15,7 @@ Welcome to the official repository for **LLM2CLIP**! This project leverages larg
 
 ---
 
-<img src="docs/static/images/radar_paper(4).png" style="max-width: 800px;">
+<img src="docs/static/images/radar_paper.png" style="max-width: 800px;">
 
 ## Challenges with Existing CLIP
 
