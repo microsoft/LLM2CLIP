@@ -3,7 +3,7 @@
 Welcome to the official repository for **LLM2CLIP**! This project leverages large language models (LLMs) as powerful textual teachers for CLIP's visual encoder, enabling more nuanced and comprehensive multimodal learning.
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2411.04997) [![Project Homepage](https://img.shields.io/badge/Project-Homepage-blue)](https://aka.ms/llm2clip) [![HuggingFace Collection](https://img.shields.io/badge/HuggingFace-Collection-orange)](https://huggingface.co/collections/microsoft/llm2clip-672323a266173cfa40b32d4c)  
-**Paper:** Accepted to NeurIPS 2024 Workshop: Self-Supervised Learning - Theory and Practice
+**Paper:** Accepted to NeurIPS 2024 Workshop: Self-Supervised Learning - Theory and Practice and AAAI 2026
 
 ---
 
