@@ -29,47 +29,93 @@
 </head>
 
 <body>
-  <!-- Header Section -->
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-          <img src="static/images/logo.png" alt="LLM2CLIP Logo" style="max-width: 100px; margin-bottom: 20px;">
-          <h1 class="title is-1">LLM2CLIP: Powerful Language Model Unlocks Richer Visual Representation</h1>
-        <h2 class="subtitle is-4">Weiquan Huang<sup>1*</sup>, Aoqi Wu<sup>1*</sup>, Yifan Yang<sup>2†</sup>, Xufang Luo<sup>2</sup>, Yuqing Yang<sup>2</sup>, Liang Hu<sup>1</sup>, Qi Dai<sup>2</sup>, Xiyang Dai<sup>2</sup>, Dongdong Chen<sup>2</sup>, Chong Luo<sup>2</sup>, Lili Qiu<sup>2</sup></h2>
-        <div class="is-size-5">
-          <span class="author-block"><sup>1</sup>Tongji University</span>,
-          <span class="author-block"><sup>2</sup>Microsoft Corporation</span>
-        </div>
-        <div class="is-size-5">
-          <span class="author-block"><sup>*</sup>Equal Contribution, work done during internship at Microsoft Research Asia</span>
-          <span class="author-block"><sup>†</sup>Corresponding to: <a class="pl-2" href="mailto:yifanyang@microsoft.com">yifanyang@microsoft.com</a></span>
-        </div>
-        <div class="publication-links mt-4">
-          <!-- Paper Link -->
-          <span class="link-block">
-            <a href="https://arxiv.org/abs/2411.04997" class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><i class="fas fa-file-pdf"></i></span>
-              <span>Paper</span>
-            </a>
-          </span>
-          <!-- Code Link -->
-          <span class="link-block">
-            <a href="https://github.com/microsoft/LLM2CLIP/" class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><i class="fab fa-github"></i></span>
-              <span>Code</span>
-            </a>
-          </span>
-          <!-- Huggingface Link -->
-          <span class="link-block">
-            <a href="https://huggingface.co/collections/microsoft/llm2clip-672323a266173cfa40b32d4c" class="external-link button is-normal is-rounded is-dark">
-              <span class="icon"><img src="static/images/huggingface_logo-noborder.svg" alt=""></span>
-              <span>HF</span>
-            </a>
-          </span>
-        </div>
+<!-- Header Section -->
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+
+      <img src="static/images/logo.png" alt="LLM2CLIP Logo"
+           style="max-width: 100px; margin-bottom: 20px;">
+
+      <h1 class="title is-1">
+        LLM2CLIP: Powerful Language Model Unlocks Richer Visual Representation
+      </h1>
+
+      <!-- Authors -->
+      <h2 class="subtitle is-4">
+        Weiquan Huang<sup>1*</sup>,
+        Aoqi Wu<sup>1*</sup>,
+        Yifan Yang<sup>2†‡</sup>,
+        Xufang Luo<sup>2</sup>,
+        Yuqing Yang<sup>2</sup>,
+        Usman Naseem<sup>3</sup>,
+        Chunyu Wang<sup>2</sup>,
+        Qi Dai<sup>2</sup>,
+        Xiyang Dai<sup>2</sup>,
+        Dongdong Chen<sup>2</sup>,
+        Chong Luo<sup>2</sup>,
+        Lili Qiu<sup>2</sup>,
+        Liang Hu<sup>1†</sup>
+      </h2>
+
+      <!-- Affiliations -->
+      <div class="is-size-5">
+        <span class="author-block"><sup>1</sup>Tongji University</span>,
+        <span class="author-block"><sup>2</sup>Microsoft Corporation</span>,
+        <span class="author-block"><sup>3</sup>Macquarie University</span>
+      </div>
+
+      <!-- Footnotes -->
+      <div class="is-size-6 mt-2">
+        <span class="author-block">
+          <sup>*</sup>Equal Contribution (work done during internship at Microsoft Research Asia)
+        </span>
+        <br/>
+        <span class="author-block">
+          <sup>†</sup>Corresponding authors:
+          <a href="mailto:yifanyang@microsoft.com">yifanyang@microsoft.com</a>,
+          <a href="mailto:lianghu@tongji.edu.cn">lianghu@tongji.edu.cn</a>
+        </span>
+        <br/>
+        <span class="author-block">
+          <sup>‡</sup>Project Lead
+        </span>
+      </div>
+
+      <!-- Links -->
+      <div class="publication-links mt-4">
+
+        <span class="link-block">
+          <a href="https://arxiv.org/abs/2411.04997"
+             class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fas fa-file-pdf"></i></span>
+            <span>Paper</span>
+          </a>
+        </span>
+
+        <span class="link-block">
+          <a href="https://github.com/microsoft/LLM2CLIP/"
+             class="external-link button is-normal is-rounded is-dark">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span>Code</span>
+          </a>
+        </span>
+
+        <span class="link-block">
+          <a href="https://huggingface.co/collections/microsoft/llm2clip-672323a266173cfa40b32d4c"
+             class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="static/images/huggingface_logo-noborder.svg" alt="">
+            </span>
+            <span>HF</span>
+          </a>
+        </span>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 <!-- News Section -->
 <section class="section">
@@ -623,6 +669,35 @@
         </div>
       </div>
     </div>
+
+  </div>
+</section>
+<!-- BibTeX Section -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+
+    <pre><code>@misc{huang2024llm2clip,
+  title     = {LLM2CLIP: Powerful Language Model Unlocks Richer Visual Representation},
+  author    = {Weiquan Huang and
+               Aoqi Wu and
+               Yifan Yang and
+               Xufang Luo and
+               Yuqing Yang and
+               Usman Naseem and
+               Chunyu Wang and
+               Qi Dai and
+               Xiyang Dai and
+               Dongdong Chen and
+               Chong Luo and
+               Lili Qiu and
+               Liang Hu},
+  year      = {2024},
+  eprint    = {2411.04997},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url       = {https://arxiv.org/abs/2411.04997}
+}</code></pre>
 
   </div>
 </section>
