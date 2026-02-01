@@ -3,11 +3,17 @@
 Welcome to the official repository for **LLM2CLIP**! This project leverages large language models (LLMs) as powerful textual teachers for CLIP's visual encoder, enabling more nuanced and comprehensive multimodal learning.
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/abs/2411.04997) [![Project Homepage](https://img.shields.io/badge/Project-Homepage-blue)](https://aka.ms/llm2clip) [![HuggingFace Collection](https://img.shields.io/badge/HuggingFace-Collection-orange)](https://huggingface.co/collections/microsoft/llm2clip-672323a266173cfa40b32d4c)  
-**Paper:** Accepted to NeurIPS 2024 Workshop: Self-Supervised Learning - Theory and Practice and AAAI 2026
+**Paper:** Accepted to NeurIPS 2024 Workshop: Self-Supervised Learning – Theory and Practice, and AAAI 2026 (**Outstanding Paper Award**)
+
 
 ---
 
 ## News 🚀🚀🚀
+- **[2026-01-23]** 🎉 **LLM2CLIP received the AAAI 2026 Outstanding Paper Award!**  
+  Our work was recognized by AAAI for its contribution to multimodal representation learning, highlighting the effectiveness of leveraging large language models as textual teachers to significantly enhance CLIP-style visual representations.  
+  👉 [AAAI 2026 Conference Paper Awards and Recognition](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
+- **[2025-03-25]** 🔥 **SigLIP2 models updated with LLM2CLIP training.**  
+  The new SigLIP2-based checkpoints show **substantial improvements** in both **short- and long-text image retrieval**, as well as **multilingual text–image retrieval**, further validating the scalability and generality of the LLM2CLIP framework.
 - **[2024-11-18]** Our Caption-Contrastive finetuned Llama3-8B-CC released on [HuggingFace](https://huggingface.co/microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned), we will try release more version.
 - **[2024-11-08]** We are currently training a **scaled-up** version with ten times the training dataset, along with upcoming updates: EVA ViT-E, InternVL-300M, SigCLIP-SO-400M, and more VLLM results trained with LLM2CLIP. Stay tuned for the most powerful CLIP models, and thank you for your star!
 - **[2024-11-06]** OpenAI's CLIP and EVA02's ViT base and large models are now available on [HuggingFace](https://huggingface.co/collections/microsoft/llm2clip-672323a266173cfa40b32d4c).
