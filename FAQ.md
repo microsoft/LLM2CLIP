@@ -4,7 +4,7 @@
 
 > **Q: It is foreseeable that the technology of LLM2CLIP will be of great significance in expanding CLIP's support for more modal data. As far as the article is concerned, LLM2CLIP has surprisingly improved CLIP's adaptability to cross-language and long text tasks. At the same time, it also proposes application possibilities for higher-dimensional data modalities such as audio and video. Of course, this puts forward further requirements for LLM2CLIP's adaptation strategy and fine-tuning methods. Based on your team's current understanding of LLM2CLIP, what additional challenges will arise, for example, the feature space alignment problem of high-dimensional modalities?**
 
-![A1](https://via.placeholder.com/15/blue/000000?text=+) **A:** To be honest, we’re already exploring a video-based version of LLM2CLIP, including scaling up both the dataset size and model parameters by several orders of magnitude. Please stay tuned for our future updates, and if you’re interested, we’d be happy to discuss this further!
+![A1](https://placeholder.photo/15/0000FF/000000?text=+) **A:** To be honest, we’re already exploring a video-based version of LLM2CLIP, including scaling up both the dataset size and model parameters by several orders of magnitude. Please stay tuned for our future updates, and if you’re interested, we’d be happy to discuss this further!
 
 Here are some additional challenges I see in this area:
 
@@ -22,7 +22,7 @@ Here are some additional challenges I see in this area:
 >
 > Looking forward to your insights on this matter and how LLM2CLIP might be adapted or extended to meet the challenges of these specialized fields!
 >
-![A2](https://via.placeholder.com/15/green/000000?text=+) **A:** Your idea is fantastic, and in fact, we have had similar thoughts. I believe there is significant potential in working on specialized fields, and here are my reasons:
+![A2](https://placeholder.photo/15/008000/000000?text=+) **A:** Your idea is fantastic, and in fact, we have had similar thoughts. I believe there is significant potential in working on specialized fields, and here are my reasons:
 
 1. **Limited Data, High Impact:** Our work focuses on fine-tuning pre-trained CLIP models with very limited data for LLM2CLIP, ranging from 3M to 60M. Compared to the 1-2B data commonly used in CLIP pre-training, this is a small amount, yet it has already demonstrated substantial performance improvements. If we focus on specialized fields, we could leverage limited domain-specific data to train the model exceptionally well in a specific knowledge area. This approach could potentially resolve issues like perception or cognition hallucinations in related multimodal domains entirely.
 
@@ -42,7 +42,7 @@ BTW, we plan to release scaled-up LLM2CLIP models (10-100x larger) next quarter.
 >
 > Looking forward to your insights on this!
 >
-![A3](https://via.placeholder.com/15/red/000000?text=+) **A:** Thank you for your question. I’m glad to clarify.
+![A3](https://placeholder.photo/15/FF0000/000000?text=+) **A:** Thank you for your question. I’m glad to clarify.
 
 **Loss Functions Integration:** We use the supervised SimCSE loss to make different captions of the same image positive samples for each other, while captions of different images serve as negative samples. This loss function is key to our method, allowing the LLM to provide meaningful supervisory signals to the image. However, the Masked Next Token Prediction (MNTP) was an initial stage we employed before using the supervised SimCSE loss; it can be understood as an earlier step in training. We first conduct MNTP, followed by supervised SimCSE loss, in a two-stage process. In practice, MNTP has little impact on the results, so removing it does not affect the conclusions. However, for optimal performance, we still chose to use MNTP before applying supervised SimCSE loss.
 
@@ -58,7 +58,7 @@ If you have more questions, please feel free to ask.
 >
 > **It's reasonable to improve the performances of VLMs on the SQA and Wizwiz benchmarks while it's strange to drop the performances on the fundamental benchmarks such as MME.**
 
-![A4](https://via.placeholder.com/15/purple/000000?text=+) **A:** We haven’t specifically tested it, and the improvement on ImageNet is indeed not very noticeable. With OpenAI’s CLIP, we can achieve about a one-point improvement, which is relatively modest compared to other retrieval tasks. My guess is that we used a large amount of dense captions, which may cause the model to favor more complex text. However, we have found in experiments that ImageNet performance is strongly correlated with data volume, possibly related to the word distribution used during alignment. We only used 15 million data points for the alignment in LLM fine-tuning. In the next version, we’ll increase the training data for LLM2CLIP by tens of times, so we plan to re-evaluate it then.
+![A4](https://placeholder.photo/15/800080/000000?text=+) **A:** We haven’t specifically tested it, and the improvement on ImageNet is indeed not very noticeable. With OpenAI’s CLIP, we can achieve about a one-point improvement, which is relatively modest compared to other retrieval tasks. My guess is that we used a large amount of dense captions, which may cause the model to favor more complex text. However, we have found in experiments that ImageNet performance is strongly correlated with data volume, possibly related to the word distribution used during alignment. We only used 15 million data points for the alignment in LLM fine-tuning. In the next version, we’ll increase the training data for LLM2CLIP by tens of times, so we plan to re-evaluate it then.
 
 The improvement of long captions or dense captions for CLIP is quite limited. Works like LongCLIP (https://arxiv.org/abs/2403.15378) and DCI (https://arxiv.org/abs/2312.08578) specifically address this issue. The problem here is that the original CLIP text encoder lacks the ability to understand such information or handle captions of this length. However, LLM2CLIP, even when trained on a fully short-text dataset, still demonstrates outstanding and leading performance, as shown in Table 5 of the paper.
 
@@ -74,7 +74,7 @@ The improvement of long captions or dense captions for CLIP is quite limited. Wo
 >
 > Looking forward for your reply!
 >
-![A5](https://via.placeholder.com/15/orange/000000?text=+) **A:** We have updated the caption contrastive fine-tuned version of Llama3-8B-CC (https://huggingface.co/microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned) to assist with your retrieval experiments and training of your own CLIP models. Additionally, the parameters for our adapter and projector have been made available in our OpenAI ViT-L repository (https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-336). The retrieval testing methods are documented in the model card for reference.
+![A5](https://placeholder.photo/15/FFA500/000000?text=+) **A:** We have updated the caption contrastive fine-tuned version of Llama3-8B-CC (https://huggingface.co/microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned) to assist with your retrieval experiments and training of your own CLIP models. Additionally, the parameters for our adapter and projector have been made available in our OpenAI ViT-L repository (https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-336). The retrieval testing methods are documented in the model card for reference.
 
 Our tests show retrieval performance exceeding the results reported in the paper, and we encourage you to try it out.
 
@@ -94,7 +94,7 @@ Furthermore, we will provide detailed instructions on how to use LLM2CLIP to fin
 >
 > Looking forward for your reply!
 >
-![A6](https://via.placeholder.com/15/orange/000000?text=+) **A:** We have updated the caption contrastive fine-tuned version of Llama3-8B-CC (https://huggingface.co/microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned) to assist with your retrieval experiments and training of your own CLIP models. Additionally, the parameters for our adapter and projector have been made available in our OpenAI ViT-L repository (https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-336). The retrieval testing methods are documented in the model card for reference.
+![A6](https://placeholder.photo/15/FFA500/000000?text=+) **A:** We have updated the caption contrastive fine-tuned version of Llama3-8B-CC (https://huggingface.co/microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned) to assist with your retrieval experiments and training of your own CLIP models. Additionally, the parameters for our adapter and projector have been made available in our OpenAI ViT-L repository (https://huggingface.co/microsoft/LLM2CLIP-Openai-L-14-336). The retrieval testing methods are documented in the model card for reference.
 
 Our tests show retrieval performance exceeding the results reported in the paper, and we encourage you to try it out.
 
@@ -114,7 +114,7 @@ Furthermore, we will provide detailed instructions on how to use LLM2CLIP to fin
 >
 > **Overall, LLM2CLIP presents a significant advancement in multimodal learning, setting a foundation for future enhancements in cross-modal representation tasks.**
 
-![A6](https://via.placeholder.com/15/orange/000000?text=+) **A:** We opened the latter layers of the network based on the GPU memory we could accommodate but did not observe significant performance improvements, so we decided not to continue this way. CLIP training relies heavily on batch size, and opening the LLM would compromise the batch size, which could have a negative impact. Additionally, keeping the LLM fixed is actually quite reasonable since our goal is to align the visual model with the correct textual modality. Now that we have access to more abundant computational resources, we plan to conduct more experiments in this area to provide answers for the community.
+![A6](https://placeholder.photo/15/FFA500/000000?text=+) **A:** We opened the latter layers of the network based on the GPU memory we could accommodate but did not observe significant performance improvements, so we decided not to continue this way. CLIP training relies heavily on batch size, and opening the LLM would compromise the batch size, which could have a negative impact. Additionally, keeping the LLM fixed is actually quite reasonable since our goal is to align the visual model with the correct textual modality. Now that we have access to more abundant computational resources, we plan to conduct more experiments in this area to provide answers for the community.
 
 We have tried the Recaption-1B dataset (https://github.com/UCSC-VLAA/Recap-DataComp-1B) labeled using Llava 1.5, but its performance was not as good as ShareCaptioner 4V. Real-world noisy datasets essentially align with the conclusion in Table 5 of our paper, specifically the 0% short caption results, which show that they underperform compared to using VLLMs for recaptioning. In our next version, we plan to incorporate a large volume of GPT-4o recaptioned results—please stay tuned!
 
@@ -130,4 +130,4 @@ We truly appreciate your recognition and look forward to contributing more valua
 >
 > **Thank you for your innovative work and significant contribution to the field of multimodal learning!**
 
-![A7](https://via.placeholder.com/15/teal/000000?text=+) **A:** Yes, we have also considered that incorporating LLM2CLIP into image-text generative models could enable more complex and precise control, and we believe there is great potential in this direction. In fact, we’ve already conducted some initial experiments, which indicate that LLM2CLIP’s llama3 performs significantly better than a standard llama3 when simply integrated with Stable Diffusion 3. However, we haven’t had the chance to explore this further in depth yet. We might delve into this more thoroughly in the future. Thank you for recognizing our work!
+![A7](https://placeholder.photo/15/008080/000000?text=+) **A:** Yes, we have also considered that incorporating LLM2CLIP into image-text generative models could enable more complex and precise control, and we believe there is great potential in this direction. In fact, we’ve already conducted some initial experiments, which indicate that LLM2CLIP’s llama3 performs significantly better than a standard llama3 when simply integrated with Stable Diffusion 3. However, we haven’t had the chance to explore this further in depth yet. We might delve into this more thoroughly in the future. Thank you for recognizing our work!
